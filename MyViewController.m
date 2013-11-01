@@ -31,6 +31,11 @@
     // Release anything that's not essential, such as cached data
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [tipField resignFirstResponder];
+    [billField resignFirstResponder];
+}
+
 - (IBAction)calculateTip:(id)sender {
 	
     NSDecimalNumber *billAmt = [NSDecimalNumber decimalNumberWithString:billField.text];
